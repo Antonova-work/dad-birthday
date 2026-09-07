@@ -270,7 +270,7 @@ function renderSummary() {
       <span>${state.selectedMuseum.title}</span>
     </div>
     <div class="summary-item">
-      <label>Кто идет</label>
+      <label>Кто идёт с тобой</label>
       <span>${people}</span>
     </div>
     <div class="summary-item">
