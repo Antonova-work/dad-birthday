@@ -47,7 +47,7 @@ const museums = [
 
 // Данные членов семьи
 const companions = [
-  { id: 'c1', name: 'Мама', img: '/sources/mama.png' },
+  { id: 'c1', name: 'Света', img: '/sources/mama.png' },
   { id: 'c2', name: 'Андрей', img: '/sources/andrey.png' },
   { id: 'c3', name: 'Настя', img: '/sources/nastya.png' }
 ];
