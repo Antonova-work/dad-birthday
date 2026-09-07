@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С Днём Рождения, Карасик! 🎉</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+  <!-- Приветственный экран -->
+  <section id="step-0" class="screen active hero-screen">
+    <div class="hero-content">
+      <h1>С Днём Рождения, Карасик!</h1>
+      <button id="startBtn" class="primary-btn">Открыть подарок 🎁</button>
+    </div>
+  </section>
+
+  <!-- Выбор музея -->
+  <section id="step-1" class="screen">
+    <div class="container">
+      <h2>Выбери музей для посещения 🏛️</h2>
+      <p class="subtitle">Выбери один музей из списка</p>
+      
+      <div class="museum-grid" id="museumGrid"></div>
+
+      <!-- Блок со старыми музеями и оценками -->
+      <div class="visited-section">
+        <h3>А я там был! ⭐️</h3>
+        <p class="subtitle-sm">Музеи, которые ты уже выбрал и посетил:</p>
+        <div class="visited-grid" id="visitedGrid"></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="toStep2Btn" class="primary-btn" disabled>Хочу сюда! ➔</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Выбор компании -->
+  <section id="step-2" class="screen">
+    <div class="container">
+      <h2>С кем идём? 👥</h2>
+      <p class="subtitle">Можно выбрать несколько человек</p>
+
+      <div class="companions-grid" id="companionsGrid"></div>
+
+      <div class="actions space-between">
+        <button class="secondary-btn" onclick="goToStep(1)">← Назад</button>
+        <button id="toStep3Btn" class="primary-btn" disabled>Упаковать 📦</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Выбор даты -->
+  <section id="step-3" class="screen">
+    <div class="container">
+      <h2>Выбери удобный день 📅</h2>
+      
+      <div class="calendar-wrapper">
+        <input type="date" id="visitDate" class="custom-date-picker">
+      </div>
+
+      <div class="actions space-between">
+        <button class="secondary-btn" onclick="goToStep(2)">← Назад</button>
+        <button id="toStep4Btn" class="primary-btn" disabled>Подтвердить ➔</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Итоговое подтверждение -->
+  <section id="step-4" class="screen">
+    <div class="container">
+      <h2>Не налажал? ✨</h2>
+
+      <div class="summary-card" id="summaryCard"></div>
+
+      <div class="actions space-between">
+        <button class="secondary-btn" onclick="goToStep(3)">← Налажал, вернуться</button>
+        <button id="finalSubmitBtn" class="primary-btn">Готово! 🚀</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Финальный экран -->
+  <section id="step-5" class="screen">
+    <div class="hero-content">
+      <h1>Заявка отправлена! 🎉</h1>
+      <p>Стоять в 6 утра умытым и побритым у двери</p>
+      <p class="love-text">С праздником! ❤️</p>
+    </div>
+  </section>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
